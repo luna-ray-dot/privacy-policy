@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --bg-color: #f4f4f9;
+      --text-color: #1f2937;
+      --card-bg: #ffffff;
+      --card-shadow: rgba(0,0,0,0.1);
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: var(--primary-color);
+      cursor: pointer;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section {
+      background: var(--card-bg);
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 20px;
+      box-shadow: 0 4px 12px var(--card-shadow);
+      transition: all 0.3s ease;
+    }
+    .content {
+      display: none;
+      margin-top: 15px;
+    }
+    p, ul {
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    .toggle-icon {
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .expanded .toggle-icon {
+      transform: rotate(45deg);
+    }
+    .toggle-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 999;
+    }
+    body.dark {
+      --bg-color: #1f2937;
+      --text-color: #f4f4f9;
+      --card-bg: #2d3748;
+      --card-shadow: rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-switch" onclick="toggleTheme()">Toggle Dark/Light</button>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>Effective Date: October 22, 2025</p>
+
+    <!-- Section Template -->
+    <div class="section">
+      <h2 onclick="toggleSection(this)">1. Introduction <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <p>Welcome to our app. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information in our app that uses Firebase, AI features, Gmail API, and other services.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">2. Data Collection <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <p>We collect the following types of data:</p>
+        <ul>
+          <li><strong>Personal Information:</strong> Name, email address, profile details via Firebase Auth or Gmail API.</li>
+          <li><strong>Usage Data:</strong> App interactions, session logs, feature usage.</li>
+          <li><strong>Device Information:</strong> Device type, OS, IP address.</li>
+          <li><strong>AI Interaction Data:</strong> Inputs and outputs for AI features improvement.</li>
+          <li><strong>Cookies & Local Storage:</strong> To maintain sessions and preferences.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">3. Use of Data <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <ul>
+          <li>Provide and personalize our services.</li>
+          <li>Authenticate users securely using Firebase Authentication.</li>
+          <li>Send notifications and emails via Gmail API.</li>
+          <li>Improve AI features and recommendations.</li>
+          <li>Analyze app usage and performance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">4. Firebase Services <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <ul>
+          <li><strong>Firebase Auth:</strong> Secure login without sharing credentials.</li>
+          <li><strong>Firestore / Realtime Database:</strong> Store user data, app state, and preferences.</li>
+          <li><strong>Analytics:</strong> Track engagement for performance improvement.</li>
+          <li><strong>Crashlytics:</strong> Monitor app crashes and errors to improve stability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">5. Gmail API <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <ul>
+          <li>Send app notifications or account-related emails.</li>
+          <li>Access email address with your permission for authentication.</li>
+          <li>We do not read or store your emails unnecessarily.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">6. AI and Machine Learning <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <p>AI features process your inputs to generate insights and recommendations. Data is anonymized where possible, and we adhere to strict privacy practices.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">7. GDPR and CCPA Compliance <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <ul>
+          <li>You have the right to access, correct, or delete your personal data.</li>
+          <li>You can opt-out of data processing for targeted personalization.</li>
+          <li>Data portability requests are honored within legal limits.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">8. Security <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <p>We implement advanced security measures to protect your data. However, no system is 100% secure. We recommend protecting your device and credentials.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">9. Data Sharing <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <p>We do not sell or trade your data. Only trusted third-party services like Firebase and Gmail API access data as necessary to provide services.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">10. Changes to Privacy Policy <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <p>We may update this policy. Updates are published on this page, and the effective date is updated accordingly.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 onclick="toggleSection(this)">11. Contact Us <span class="toggle-icon">+</span></h2>
+      <div class="content">
+        <p>Questions or concerns? Contact us at <a href="mailto:support@yourapp.com">support@yourapp.com</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleSection(header) {
+      const section = header.parentElement;
+      section.classList.toggle('expanded');
+      const content = section.querySelector('.content');
+      if(content.style.display === "block"){
+        content.style.display = "none";
+        header.querySelector('.toggle-icon').textContent = "+";
+      } else {
+        content.style.display = "block";
+        header.querySelector('.toggle-icon').textContent = "−";
+      }
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
